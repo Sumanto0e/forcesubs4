@@ -1,0 +1,85 @@
+{
+  "name": "File Sharing Man",
+  "description": "BOT Multi Force Subs File Sharing Bot berguna untuk menyimpan file dan dapat diakses melalui link khusus",
+  "keywords": [
+    "telegram",
+    "file",
+    "sharing"
+  ],
+  "repository": "https://github.com/arkadiaz/tariko",
+  "logo": "https://telegra.ph/file/9dc4e335feaaf6a214818.jpg",
+  "env": {
+    "TG_BOT_TOKEN": {
+      "description": "Masukan Bot token, Dapatkan dari t.me/BotFather",
+      "value": "5109658619:AAHUF7WWUDhJIM9IWz4F6XgvLNJYvhudRaA"
+    },
+    "OWNER": {
+      "description": "Masukan Username Telegram untuk Owner BOT [ Jangan Pake @ ]",
+      "value": "userjackid"
+    },
+    "OWNER_ID": {
+      "description": "Masukan User ID Telegram untuk Owner BOT",
+      "value": "5135050037"
+    },
+    "ADMINS": {
+      "description": "Masukan User ID untuk mendapatkan hak Admin BOT [Hanya dapat membuat link]",
+      "value": "1941303148"
+    },
+    "APP_ID": {
+      "description": "Dapatkan APP ID di web my.telegram.org",
+      "value": "20244703"
+    },
+    "API_HASH": {
+      "description": "Dapatkan API HASH di web my.telegram.org",
+      "value": "aecd498f68e85c1c925a6a9f95103aee"
+    },
+    "CHANNEL_ID": {
+      "description": "Masukan ID Channel Untuk [Channel Database]",
+      "value": "-1001581242403"
+    },
+    "FORCE_SUB_CHANNEL": {
+      "description": "Masukan ID dari Channel Atau Group Untuk Wajib Subscribenya, Bila tidak ingin dipakai Fsubnya, isi dengan 0",
+      "value": "-1001760254323"
+    },
+    "FORCE_SUB_CHANNEL1": {
+      "description": "Masukan ID dari Channel Atau Group Untuk Wajib Subscribenya, Bila tidak ingin dipakai Fsubnya, isi dengan 0",
+      "value": "-1001445047982"
+    },
+    "FORCE_SUB_GROUP": {
+      "description": "Masukan ID dari Group Untuk Wajib Subscribenya, Bila tidak ingin dipakai Fsubnya, isi dengan 0",
+      "value": "-1001653264676"
+    },
+    "FORCE_SUB_GROUP1": {
+      "description": "Masukan ID dari Group Untuk Wajib Subscribenya, Bila tidak ingin dipakai Fsubnya, isi dengan 0",
+      "value": "-1001819294039"
+    },
+    "START_MESSAGE": {
+      "description": "Pesan /start memulai awalan ke bot, Gunakan format parsemode HTML",
+      "value": "<b>Hello {first}\n\nSaya dapat menyimpan file pribadi di Channel Tertentu dan pengguna lain dapat mengaksesnya dari link khusus.</b>"
+    },
+    "FORCE_SUB_MESSAGE": {
+      "description": "Pesan Paksa Subscribe bot, Gunakan Format parsemode HTML",
+      "value": "<b>Hello {first}\n\nAnda harus bergabung di Channel/Grup saya untuk menggunakan saya\n\nSilakan Join Ke Channel Terlebih Dahulu</b>"
+    }
+  },
+  "addons": [
+    {
+    "plan": "heroku-postgresql",
+      "options": {
+        "version": "12"
+      }
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
+
